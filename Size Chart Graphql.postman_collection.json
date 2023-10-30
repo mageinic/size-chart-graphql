@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "3cc1e6f9-40b3-4a37-acc0-7dfc9845f7b5",
+		"name": "Size Chart Graphql",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Size Chart product Graphql ",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Store",
+						"value": "Default",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n  products(filter: {sku: {eq: \"MH04\"}}) {\n    items {\n      name\n      sku\n    size_chart_attribute{\n        title\n        sizes\n        bust\n        waist\n        hip\n        content\n    }\n      price_range {\n        minimum_price {\n          regular_price {\n            value\n            currency\n          }\n          final_price {\n            value\n            currency\n          }\n          discount {\n            amount_off\n            percent_off\n          }\n        }\n        maximum_price {\n          regular_price {\n            value\n            currency\n          }\n          final_price {\n            value\n            currency\n          }\n          discount {\n            amount_off\n            percent_off\n          }\n        }\n      }\n    }\n  }\n}\n",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/graphql",
+					"host": [
+						 "{{baseurl}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Size Chart Backend Configuration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n  storeConfig {\n    sizechart_enable\n  }\n}\n",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/graphql",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

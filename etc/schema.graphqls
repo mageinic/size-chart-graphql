@@ -1,0 +1,40 @@
+# MageINIC
+# Copyright (C) 2023 MageINIC <info@magentocoders.com>
+#
+# NOTICE OF LICENSE
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see http://opensource.org/licenses/gpl-3.0.html.
+#
+# Do not edit or add to this file if you wish to upgrade this extension to newer
+# version in the future.
+#
+# @category MageINIC
+# @package MageINIC_SizeChartGraphQl
+# @copyright Copyright (c) 2023 MageINIC (https://www.mageinic.com/)
+# @license http://opensource.org/licenses/gpl-3.0.html GNU General Public License,version 3 (GPL-3.0)
+# @author MageINIC <info@magentocoders.com>
+
+type StoreConfig {
+    sizechart_enable : String @doc(description: "Enable SizeChart")
+}
+
+interface ProductInterface {
+    size_chart_attribute: SizeChartDetailsOutput
+    @doc(description: "Size Chart applied on the product")
+    @resolver(class: "MageINIC\\SizeChartGraphQl\\Model\\Resolver\\Product\\SizeChart")
+}
+
+type SizeChartDetailsOutput {
+    title: String @doc(description: "Title of the SizeChart")
+    sizes: String @doc(description: "Sizes of the SizeChart")
+    bust: String @doc(description: "Bust of the SizeChart")
+    waist: String @doc(description: "Waist of the SizeChart")
+    hip: String @doc(description: "Hip of the SizeChart")
+    content: String @doc(description: "Content of the SizeChart")
+}
