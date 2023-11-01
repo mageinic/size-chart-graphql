@@ -1,6 +1,6 @@
 {
     "name": "mageinic/sizechart-graph-ql",
-    "description": "SizeChart GraphQl extension which allows you to create and display size charts for products by MageINIC Team",
+    "description": "Size Chart GraphQL is a part of MageINIC Size Chart extension that adds GraphQL features. This extension extends Size Chart definitions.",
     "type": "magento2-module",
     "license": [
         "OSL-3.0",
