@@ -7,7 +7,7 @@
 Run the following command in Magento 2 root folder:
 
 ```
-composer require mageinic/sizechart-graph-ql
+composer require mageinic/size-chart-graphql
 
 php bin/magento maintenance:enable
 php bin/magento setup:upgrade
@@ -22,12 +22,12 @@ Magento 2 Size Chart GraphQL requires installing [MageINIC Size Chart](https://g
 
 **Or Install via composer [Recommend]**
 ```
-composer require mageinic/sizechart
+composer require mageinic/size-chart
 ```
 
 ## 2. How to use
 
-- To view the queries that the **MageINIC Size Chart GraphQL** extension supports, you can check `SizeChart GraphQl User Guide.pdf` Or run `Size Chart Graphql.postman_collection.json` in Postman.
+- To view the queries that the **MageINIC Size Chart GraphQL** extension supports, you can check `Size Chart GraphQl User Guide.pdf` Or run `Size Chart Graphql.postman_collection.json` in Postman.
 
 ## 3. Get Support
 
